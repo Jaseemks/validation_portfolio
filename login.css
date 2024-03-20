@@ -1,0 +1,7 @@
+.login-body
+{
+  background: linear-gradient(to right, #fafc94, #e54c22);
+}
+.login-body{
+    margin-left: 450px; margin-right: 450px; margin-top: 200px;
+}
