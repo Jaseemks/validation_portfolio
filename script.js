@@ -37,10 +37,16 @@ function login(){
     const password=document.getElementById("password").value;
     if(uname.length==0)
     {
-        alert("Enter a valid User Name")
+        alert("Enter a valid Email Name")
         return false;
     }
-    if(password.length==0)
+   
+    if (/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(uname) == false) {
+        alert("Enter a valid Email");
+        return false;
+    }
+
+    if(password.length==0 || password.length<4 )
     {
         alert("Enter a valid Password")
         return false;
